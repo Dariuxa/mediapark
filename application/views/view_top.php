@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="public/css/custom.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<nav class="navbar navbar navbar-static-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
@@ -26,13 +26,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             if($this->session->userdata('logged_in')){?>
 
             <ul class="nav navbar-nav">
-                <li<?=$this->uri->segment(2) == 'new'?' class="active"':''?>>
+                <li<?=$this->uri->segment(1) == 'new'?' class="active"':''?>>
                     <a href="<?='new'?>">
                         <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
                         Post new advertisement
                     </a>
                 </li>
-                <li<?=$this->uri->segment(2) == 'my-advertisements'?' class="active"':''?>>
+                <li<?=$this->uri->segment(1) == 'my-advertisements'?' class="active"':''?>>
                     <a href="<?='my-advertisements'?>">
                         <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
                         My advertisements
@@ -53,13 +53,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </li><?php
                 else: ?>
 
-                <li<?=$this->uri->segment(2) == 'login'?' class="active"':''?>>
+                <li<?=$this->uri->segment(1) == 'login'?' class="active"':''?>>
                     <a href="<?='login'?>">
                         <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
                         Log in
                     </a>
                 </li>
-                <li<?=$this->uri->segment(2) == 'register'?' class="active"':''?>>
+                <li<?=$this->uri->segment(1) == 'register'?' class="active"':''?>>
                     <a href="<?='register'?>">
                         <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                         New user registration

@@ -54,6 +54,9 @@ $route['login'] = 'user/login';
 $route['logout'] = 'user/logout';
 
 $route['new'] = 'adv/new_advertisement';
+$route['my-advertisements'] = 'adv/my_advertisements';
+$route['my-advertisements/(:num)'] = 'adv/my_advertisements/$1';
+$route['(:num)'] = 'adv/index/$1';
 
 $route['default_controller'] = 'adv';
 $route['404_override'] = '';

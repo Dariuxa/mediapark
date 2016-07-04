@@ -21,7 +21,7 @@ $password = array(
 <div class="container">
     <?=form_open()?>
     <legend>Login</legend>
-    <div class="col-sm-5">
+    <div class="col-sm-4">
         <div class="form-group<?=form_error('email') != null?' has-error':''?>">
             <label for="email">Email</label>
             <?=form_error('email') != null?form_error('email'):''?>

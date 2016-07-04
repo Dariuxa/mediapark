@@ -45,9 +45,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 if($this->session->userdata('logged_in')): ?>
 
                 <li>
-                <a href="<?='atsijungti'?>">
+                <a href="<?='logout'?>">
                     <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                    logout
+                    Logout
                     [<?=$this->session->userdata('email')?>]
                 </a>
                 </li><?php

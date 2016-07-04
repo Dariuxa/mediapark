@@ -11,6 +11,7 @@ class user extends CI_Controller
     {
         if($this->session->userdata('logged_in')) redirect('');
         $this->load->library('form_validation');
+        $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|max_length[50]|is_unique[users.email]');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[20]|matches[password_conf]');
         $this->form_validation->set_rules('password_conf', 'Password confirmation', 'trim');
@@ -38,6 +39,7 @@ class user extends CI_Controller
     {
         if($this->session->userdata('logged_in')) redirect('');
         $this->load->library('form_validation');
+        $this->form_validation->set_error_delimiters('<p class="text-danger">','</p>');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email|max_length[50]|callback_check_login');
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[20]');
         if ($this->form_validation->run() == FALSE)

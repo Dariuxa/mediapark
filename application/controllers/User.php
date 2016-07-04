@@ -52,7 +52,7 @@ class user extends CI_Controller
         }
         else
         {
-            $this->session->set_flashdata('message',array('success'=>'Successfully loggedin'));
+            $this->session->set_flashdata('message',array('success'=>'Successfully logged in'));
             redirect();
         }
     }

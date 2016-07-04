@@ -72,3 +72,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </div>
 </nav>
+<div class="container">
+    <div id="alerts-placeholder">
+        <?php
+        if($this->session->flashdata('message')):
+        $message = $this->session->flashdata('message');
+        foreach($message as $type => $text): ?>
+        <div class="alert alert-<?=$type?> alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <?=$text?>
+        </div><?php
+        endforeach;
+        endif; ?>
+    </div>
+</div>

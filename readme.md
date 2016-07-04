@@ -10,6 +10,3 @@ Configurations:
 	application/config
 	
 Live demonstration: http://www.mif.vu.lt/~dafr7455/mediapark/
-
-
-Started, but not completed: notification messages after redirect.

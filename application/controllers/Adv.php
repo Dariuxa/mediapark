@@ -25,7 +25,8 @@ class adv extends CI_Controller
         $this->form_validation->set_rules('description', 'Description', 'trim|required');
         if ($this->form_validation->run() == FALSE)
         {
-            $this->load->view('view_top');
+            $header['head_title'] = 'Post new advertisement';
+            $this->load->view('view_top',$header);
             $this->load->view('adv/view_new_adv');
             $this->load->view('view_bottom');
         }
@@ -48,7 +49,8 @@ class adv extends CI_Controller
     public function my_advertisements($page = 0)
     {
         if(!$this->session->userdata('logged_in')) redirect();
-        $this->load->view('view_top');
+        $header['head_title'] = 'My advertisements';
+        $this->load->view('view_top',$header);
         $this->show_ads_list($page,$this->session->userdata('id'),'my-advertisements');
         $this->load->view('view_bottom');
     }

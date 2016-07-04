@@ -19,7 +19,8 @@ class user extends CI_Controller
         $this->form_validation->set_rules('phone', 'Phone', 'trim|required|numeric|max_length[20]');
 
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('view_top');
+            $header['head_title'] = 'Registration';
+            $this->load->view('view_top',$header);
             $this->load->view('user/view_register');
             $this->load->view('view_bottom');
         } else {
@@ -44,7 +45,8 @@ class user extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[20]');
         if ($this->form_validation->run() == FALSE)
         {
-            $this->load->view('view_top');
+            $header['head_title'] = 'Login';
+            $this->load->view('view_top',$header);
             $this->load->view('user/view_login');
             $this->load->view('view_bottom');
         }

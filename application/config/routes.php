@@ -53,6 +53,8 @@ $route['register'] = 'user/register';
 $route['login'] = 'user/login';
 $route['logout'] = 'user/logout';
 
+$route['new'] = 'adv/new_advertisement';
+
 $route['default_controller'] = 'adv';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
